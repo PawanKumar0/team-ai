@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Tech Team - Progress Tracker</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+      :root {
+        --bg-color: #0d1117;
+        --text-color: #c9d1d9;
+        --link-color: #58a6ff;
+        --border-color: #30363d;
+        --header-bg: #161b22;
+        --card-bg: #161b22;
+        --success: #238636;
+        --progress-bg: #21262d;
+        --progress-fill: #238636;
+      }
+
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+          sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        line-height: 1.6;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      header {
+        text-align: center;
+        padding: 40px 0;
+        border-bottom: 1px solid var(--border-color);
+        margin-bottom: 40px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 2.5em;
+        color: #ffffff;
+      }
+      p.subtitle {
+        color: #8b949e;
+        font-size: 1.2em;
+      }
+
+      .progress-container {
+        background-color: var(--card-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        padding: 20px;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+
+      .progress-bar-bg {
+        background-color: var(--progress-bg);
+        border-radius: 10px;
+        height: 20px;
+        width: 100%;
+        margin-top: 10px;
+        overflow: hidden;
+      }
+
+      .progress-bar-fill {
+        background-color: var(--progress-fill);
+        height: 100%;
+        width: 0%;
+        transition: width 0.5s ease-in-out;
+        text-align: center;
+        font-size: 12px;
+        line-height: 20px;
+        color: white;
+        font-weight: bold;
+      }
+
+      .content {
+        background-color: var(--card-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        padding: 40px;
+      }
+
+      /* Markdown Styles */
+      a {
+        color: var(--link-color);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      h1,
+      h2,
+      h3 {
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 0.3em;
+        margin-top: 1.5em;
+        color: #ffffff;
+      }
+      ul {
+        padding-left: 20px;
+      }
+
+      /* Checkbox styling */
+      input[type="checkbox"] {
+        appearance: none;
+        background-color: transparent;
+        margin: 0;
+        font: inherit;
+        color: currentColor;
+        width: 1.15em;
+        height: 1.15em;
+        border: 2px solid var(--text-color);
+        border-radius: 3px;
+        display: grid;
+        place-content: center;
+        margin-right: 10px;
+        transform: translateY(0.15em);
+        cursor: not-allowed; /* Read-only */
+      }
+
+      input[type="checkbox"]::before {
+        content: "";
+        width: 0.65em;
+        height: 0.65em;
+        transform: scale(0);
+        transition: 120ms transform ease-in-out;
+        box-shadow: inset 1em 1em var(--success);
+        transform-origin: center;
+        clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+      }
+
+      input[type="checkbox"]:checked::before {
+        transform: scale(1);
+      }
+
+      input[type="checkbox"]:checked {
+        border-color: var(--success);
+      }
+
+      li {
+        list-style: none;
+        margin: 5px 0;
+      }
+
+      /* Interactive tasks override */
+      li:has(input) {
+        list-style: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>AI Tech Team Architecture</h1>
+      <p class="subtitle">Learning Path & Project Roadmap</p>
+    </header>
+
+    <div class="progress-container">
+      <h3>Overall Progress</h3>
+      <div class="progress-bar-bg">
+        <div id="progressBar" class="progress-bar-fill">0%</div>
+      </div>
+      <p id="progressText" style="margin-top: 10px; color: #8b949e">
+        Loading...
+      </p>
+    </div>
+
+    <div id="content" class="content">Loading Plan...</div>
+
+    <script>
+      // Fetch the PLAN.md file (assuming it's in the parent directory or served correctly)
+      // For local opening, we might need to paste content, but for GitHub Pages, this works.
+      // Since we are running locally first, let's embed a placeholder or try to fetch relative.
+
+      async function loadPlan() {
+        try {
+          const response = await fetch("../PLAN.md");
+          if (!response.ok) {
+            throw new Error("Could not load PLAN.md");
+          }
+          const markdown = await response.text();
+
+          // Render Markdown
+          const contentDiv = document.getElementById("content");
+          contentDiv.innerHTML = marked.parse(markdown);
+
+          // Calculate Progress
+          const checkboxes = contentDiv.querySelectorAll(
+            'input[type="checkbox"]',
+          );
+          const total = checkboxes.length;
+          const checked = Array.from(checkboxes).filter(
+            (cb) => cb.checked,
+          ).length;
+          const percentage =
+            total === 0 ? 0 : Math.round((checked / total) * 100);
+
+          // Update Progress Bar
+          document.getElementById("progressBar").style.width = percentage + "%";
+          document.getElementById("progressBar").textContent = percentage + "%";
+          document.getElementById("progressText").textContent =
+            `${checked} of ${total} tasks completed`;
+
+          // Make checkboxes read-only but clearly visible
+          checkboxes.forEach((cb) => {
+            cb.disabled = true;
+            // Add class for styling if needed
+          });
+        } catch (error) {
+          document.getElementById("content").innerHTML = `
+                <p style="color: #f85149;">Error loading plan: ${error.message}</p>
+                <p>If you are opening this file directly in a browser (file://), fetch requests are blocked by CORS.</p>
+                <p><strong>Option 1:</strong> Run a local server (e.g., <code>npx serve</code>).</p>
+                <p><strong>Option 2:</strong> Push to GitHub and use GitHub Pages.</p>
+            `;
+        }
+      }
+
+      loadPlan();
+    </script>
+  </body>
+</html>
