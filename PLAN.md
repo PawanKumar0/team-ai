@@ -49,9 +49,15 @@ To build an enterprise-grade agentic system, we need to master these domains:
 
 ---
 
-### 1.2 Learning Path
+### 1.2 Learning Path & Module Standard
 
-Structured from "Zero to Hero" combining your resources with enterprise best practices.
+**Module Template (Standard)**
+Every learning module must include:
+
+1.  **Theory**: Core concepts and resources.
+2.  **Practice Task**: Hands-on experiment or mini-project.
+3.  **Interview Questions**: "After finishing this, you should be able to answer..."
+4.  **Product Integration**: How this concept applies to our `src/` codebase.
 
 #### **Module 1: The Foundation (Weeks 1-2)**
 
