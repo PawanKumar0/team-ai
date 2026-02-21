@@ -56,79 +56,67 @@ Every learning module must include:
 
 1.  **Theory**: Core concepts and resources.
 2.  **Practice Task**: Hands-on experiment or mini-project.
-3.  **Interview Questions**: "After finishing this, you should be able to answer..."
+3.  **Interview Questions**: "After finishing this, you should be able to answer..." (FAANG-level focus).
 4.  **Product Integration**: How this concept applies to our `src/` codebase.
 
-#### **Module 1: The Foundation (Weeks 1-2)**
+#### **Step 1: Understand LLMs Before You Build**
 
-_Focus: Internalizing how LLMs work and how to talk to them._
+_Focus: Deep understanding of the Transformer, Attention, and the foundational math of LLMs._
 
-- [ ] **Course**: [Deep Learning Specialization (Andrew Ng)](https://www.coursera.org/specializations/deep-learning)
-- [ ] **Video**: [Karpathy's Intro to LLMs](https://www.youtube.com/watch?v=zjkBMFhNj_g)
-- [ ] **Reading**: "Attention Is All You Need" (Paper)
-- [ ] **Practice**: [OpenAI Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering)
+- [ ] **Course**: [Deep Learning Specialization (Andrew Ng)](https://lnkd.in/gwqSPS4J)
+- [ ] **Course**: [Karpathy's Neural Networks: Zero to Hero](https://lnkd.in/gZumxBZw)
+- [ ] **Video**: [Karpathy's Intro to LLMs](https://lnkd.in/gcaiyVJz)
+- [ ] **Reading**: ["Attention Is All You Need" (Paper)](https://lnkd.in/gXUccydp)
+- [ ] **Reading**: [Stanford CS25](https://lnkd.in/gUzsiN_e)
+- [ ] **Reading**: NeoSage Issues 1 & 2 ([Link 1](https://lnkd.in/g2pXsyHn), [Link 2](https://lnkd.in/gPimp6mv))
+- [ ] **Code/Mental Model**: [Karpathy's microGPT (200-line Python LLM)](https://www.linkedin.com/posts/shubshrivastava_most-beautiful-code-i-have-seen-shared-in-activity-7429424991537913856-sIAt?utm_source=share&utm_medium=member_ios&rcm=ACoAABCo6bYBh04t-qQbMdjohMTr26eF3DwAnh8)
 
-#### **Module 2: Building Single Agents (Weeks 3-4)**
+#### **Step 2: Prompting as a Developer Skill**
 
-_Focus: Tools, Function Calling, and Basic RAG._
+_Focus: Prompt engineering, lifecycles, and treating instructions as code._
+
+- [ ] **Guide**: [OpenAI Prompt Engineering Guide](https://lnkd.in/gqjcPxcQ)
+- [ ] **Guide**: [Anthropic Prompt Engineering Guide](https://lnkd.in/gsnasAV6)
+- [ ] **Reading**: [The Prompt Lifecycle Every AI Engineer Should Know (NeoSage)](https://lnkd.in/g5UJaSed)
+
+#### **Step 3: Get Your Hands Dirty**
+
+_Focus: Hands-on implementation of RAG, Fine-tuning, and Chatbots._
 
 - [ ] **Project**: Build a CLI Chatbot that can search the web and summarize.
-- [ ] **Concept**: [RAG from Scratch (LangChain Video)](https://www.youtube.com/watch?v=wd7TZ4w1mSw)
-- [ ] **Reading**: [Generative AI Agents (Nir Diamant Repo)](https://github.com/NirDiamant/GenAI_Agents)
-- [ ] **Code**: Implement a simple RAG pipeline using a Vector DB.
+- [ ] **Project**: Fine-tune a model.
+- [ ] **Project**: [Build a RAG pipeline from scratch](https://lnkd.in/gbdiAkPD)
+- [ ] **Repo Study**: [RAG Techniques repo by Nir Diamant](https://lnkd.in/gA7maM5Y)
+- [ ] **Repo Study**: [GenAI Agents repo by Nir Diamant](https://lnkd.in/g5HHZrJK)
+- [ ] **Repo Study**: ["Hands-On Large Language Models" Code Repo (from Srishti)](https://x.com/srishticodes/status/2024524620381221094?s=46)
 
-#### **Module 3: Multi-Agent Systems (Weeks 5-6)**
+#### **Step 4: Think in Systems & Agents**
 
-_Focus: Orchestration, State, and Frameworks._
+_Focus: Frameworks, Multi-agent orchestration, and LLMOps/DevOps._
 
-- [ ] **Frameworks**: Deep dive into **LangGraph** (State graphs) or **AutoGen** / **CrewAI**.
-- [ ] **Protocol**: Learn [Model Context Protocol (MCP)](https://modelcontextprotocol.io/).
-- [ ] **Paper**: [Communicative Agents for Software Development (ChatDev)](https://arxiv.org/abs/2307.07924)
-- [ ] **Project**: Build a "Writer + Editor" loop.
-
-#### **Module 4: Enterprise Hardening & LLMOps (Weeks 7-8)**
-
-_Focus: Security, Eval, and Production Ops._
-
-- [ ] **LLMOps**: Master **LangSmith** or **Azure AI Studio** for tracing.
-- [ ] **Security**: Study [OWASP Top 10 for LLMs](https://owasp.org/www-project-top-10-for-large-language-model-applications/).
-- [ ] **Eval**: Set up **Ragas** to test your RAG pipeline's accuracy.
-- [ ] **Video**: [End-to-End LLMOps (Azure & LangChian)](https://youtu.com/I3CWFDgqvq8?si=c77KvPOnkfG6R_Zv)
+- [ ] **Frameworks**: Deep dive into **LangChain** and **LangGraph**.
+- [ ] **Protocols**: Master [Model Context Protocol (MCP)](https://lnkd.in/gfdJqGU4) and A2A integration.
+- [ ] **Agents (Mental Models)**: [LazyCPU's simple agent framework](https://open.substack.com/pub/lazycpu/p/a-simple-agent-part-1?utm_campaign=post&utm_medium=web). Also read on planning, memory, inter-agent coordination [here](https://lnkd.in/gFfxtN-c).
+- [ ] **Evaluations**: If you can't measure it, you can't improve it. Learn Ragas/TruLens.
+- [ ] **DevOps/Deployment**: Explore free/low-cost deployment solutions (Dockerized agents, Railway, Render, Fly.io).
 
 ---
 
-### 1.3 Tools & Platforms
+### 1.3 Recommended Books & Learning Hubs
 
-#### **Building Frameworks**
+#### **Books I'd Read:**
 
-- **LangGraph**: Best for complex, controlled state loops (Production ready).
-- **CrewAI**: Great for quick "Team" orchestration (Agent-as-Employee metaphor).
-- **AutoGen**: Excellent for conversational multi-agent research.
+- [ ] [AI Engineering by Chip Huyen](https://lnkd.in/g-MRviYk)
+- [ ] [The LLM Engineering Handbook by Iusztin & Labonne](https://lnkd.in/gyA4vFXz)
+- [ ] [Designing Machine Learning Systems by Chip Huyen](https://lnkd.in/guN-UhXA)
 
-#### **Hosting (Free/Low-Cost for Dev)**
+#### **Learning Hubs:**
 
-- **Railway**: Generous free tier/trial, great for Dockerized agents.
-- **Render**: Good for simple web services.
-- **Hugging Face Spaces**: Free hosting for Gradio/Streamlit UI demos.
-- **Fly.io**: Good for "Sprites" (VMs) if sandboxing is needed (Trial available).
-
----
-
-### 1.4 Research Papers (Reading List)
-
-_Essential readings for deep understanding._
-
-**Architecture & Planning:**
-
-- [ ] **Magentic-One (Microsoft)**: A generalized multi-agent system for web/file tasks.
-- [ ] **Mixture of Agents**: Enhancing capabilities by combining specialized agents.
-- [ ] **OmniParser**: Pure Vision-Based GUI Agent (crucial for "Computer Use").
-- [ ] **Voyager**: An Open-Ended Embodied Agent (for lifelong learning concepts).
-
-**Governance & Protocols:**
-
-- [ ] **Practices for Governing Agentic AI Systems (OpenAI)**.
-- [ ] **Model Context Protocol (MCP)**: The standard for connecting agents to data.
+- [DeepLearning.AI](https://lnkd.in/gAYmJqS6)
+- [Anthropic Academy](https://lnkd.in/gZANmHVk)
+- [Google x Kaggle GenAI Intensive](https://lnkd.in/ga5X7tVJ)
+- [NVIDIA GenAI/LLM Learning Paths](https://lnkd.in/gCtDnhni)
+- [NeoSage (blog.neosage.io)](https://blog.neosage.io)
 
 ---
 
@@ -152,7 +140,7 @@ We will treat agents as distinct "employees" with defined roles, tools, and perm
       - _Focus_: finding bugs and vulnerabilities.
     - **"Ops" (DevOps/SRE)**:
       - _Tools_: Docker, CI Pipelines, Cloud APIs.
-      - _Focus_: Deployment and Infrastructure.
+      - _Focus_: Deployment, infrastructure, scaling, and monitoring.
     - **"Researcher" (RAG Specialist)**:
       - _Tools_: Web Search, Vector DB (Docs).
       - _Focus_: Finding answers to blocking technical questions.
@@ -169,6 +157,7 @@ We will treat agents as distinct "employees" with defined roles, tools, and perm
 - [ ] **Step 3: The Reviewer Agent (Feedback Loop)**
 - [ ] **Step 4: Integration & Orchestration (LangGraph)**
 - [ ] **Step 5: Monitoring & Security (LangSmith Tracing)**
+- [ ] **Step 6: Enterprise Deployment (DevOps Pipelines & Scaling)**
 
 ---
 
@@ -176,4 +165,4 @@ We will treat agents as distinct "employees" with defined roles, tools, and perm
 
 _(Update this section as you complete tasks)_
 
-- **[DATE]**: Project Initialized.
+- **2026-02-22**: Learning path updated to reflect enterprise AI engineer step-by-step roadmap, integrating advanced multi-agent, DevOps, and System Design tracks.

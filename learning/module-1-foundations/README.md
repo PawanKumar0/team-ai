@@ -12,52 +12,61 @@
 
 ---
 
-## 1. Theory: The "Must Watch" List
+## 1. Theory: The "Must Watch" & "Must Read" List
 
 ### A. The Big Picture (Start Here)
 
+- **Course**: [Deep Learning Specialization (Andrew Ng)](https://link.coursera.org/deep-learning)
+  - _Why_: The gold standard for understanding neural networks from the ground up.
+- **Course**: [Karpathy's Neural Networks: Zero to Hero](https://karpathy.ai/zero-to-hero.html)
 - **Video**: [Intro to Large Language Models (Andrej Karpathy)](https://www.youtube.com/watch?v=zjkBMFhNj_g) (1 hr)
-  - _Why_: Karpathy is the best teacher in the field. He explains the "State of the Art" perfectly.
-  - _Look for_: Pre-training vs Fine-tuning (RLHF). This distinction is vital for building agents.
+  - _Why_: Explains the "State of the Art" perfectly. Look for: Pre-training vs Fine-tuning (RLHF). This distinction is vital for building agents.
+- **Deep Dive Video**: [Karpathy's deep dive into LLMs](https://www.youtube.com/watch?v=kCc8FmEb1nY)
 
     <details>
     <summary><strong>📝 Key Concepts Summary (Read this!)</strong></summary>
 
-    #### 1. Pre-training (The "Base Model")
-    - **Goal**: Learn the statistical structure of language.
-    - **Data**: The entire internet (Common Crawl, Wikipedia, GitHub).
-    - **Process**: Predict the next token. (e.g., "The cat sat on the [MAT]").
-    - **Result**: A model that can dream text but isn't helpful. It might answer a question with another question.
+  #### 1. Pre-training (The "Base Model")
+  - **Goal**: Learn the statistical structure of language.
+  - **Data**: The entire internet (Common Crawl, Wikipedia, GitHub).
+  - **Process**: Predict the next token. (e.g., "The cat sat on the [MAT]").
+  - **Result**: A model that can dream text but isn't helpful. It might answer a question with another question.
 
-    #### 2. Supervised Fine-Tuning (SFT) (The "Assistant Model")
-    - **Goal**: Learn to follow instructions.
-    - **Data**: High-quality Q&A written by human contractors.
-    - **Process**: Train on datasets like `{User: "Hi", Assistant: "Hello! How can I help?"}`.
-    - **Result**: A helpful chatbot (like ChatGPT).
+  #### 2. Supervised Fine-Tuning (SFT) (The "Assistant Model")
+  - **Goal**: Learn to follow instructions.
+  - **Data**: High-quality Q&A written by human contractors.
+  - **Process**: Train on datasets like `{User: "Hi", Assistant: "Hello! How can I help?"}`.
+  - **Result**: A helpful chatbot (like ChatGPT).
 
-    #### 3. RLHF (Reinforcement Learning from Human Feedback)
-    - **Goal**: Alignment (Safety, Tone, Preference).
-    - **Process**:
-      - Model generates 4 answers.
-      - Human ranks them (A > B > C).
-      - Model learns a "Reward Function" to maximize human approval.
+  #### 3. RLHF (Reinforcement Learning from Human Feedback)
+  - **Goal**: Alignment (Safety, Tone, Preference).
+  - **Process**:
+    - Model generates 4 answers.
+    - Human ranks them (A > B > C).
+    - Model learns a "Reward Function" to maximize human approval.
 
-    #### 4. System 2 Thinking (Agents)
-    - LLMs are "System 1" (Fast, Intuitive).
-    - Agents/CoT allow "System 2" (Slow, Deliberate reasoning) by giving the model time to "think" or use tools before answering.
-    </details>
+  #### 4. System 2 Thinking (Agents)
+  - LLMs are "System 1" (Fast, Intuitive).
+  - Agents/CoT allow "System 2" (Slow, Deliberate reasoning) by giving the model time to "think" or use tools before answering.
+  </details>
 
 ### B. The Machine Room (How it works)
 
+- **Reading**: ["Attention Is All You Need" (The original Transformer paper)](https://arxiv.org/abs/1706.03762)
 - **Reading**: [The Illustrated Transformer (Jay Alammar)](https://jalammar.github.io/illustrated-transformer/)
   - _Why_: The best visual explanation of the "Attention Is All You Need" paper.
   - _Key Concept_: **Self-Attention**. How the model looks at "bank" in "river bank" vs "bank account" differently.
+- **Reading**: [Stanford CS25: Transformers United](https://web.stanford.edu/class/cs25/)
+- **Summary Newsletters**: [NeoSage Issues 1 & 2](https://blog.neosage.io) for faster intuition on LLM development.
 
-### C. The Input (Tokens)
+### C. The Input (Tokens & The Code)
 
 - **Tool**: [Tiktokenizer (OpenAI)](https://tiktokenizer.vercel.app/)
   - _Activity_: Type in "The quick brown fox" and see how it breaks down.
   - _Notice_: "Hello world" is 2 tokens. "Ingeniousness" might be 3-4.
+- **Micro-Project (Mental Model)**: [Andrej Karpathy's microGPT](https://github.com/karpathy/microgpt)
+  - _Why_: A 200-line, pure Python, zero-dependency implementation of a GPT. This takes "AI" from abstract math to concrete code.
+  - _Action_: Read the code. Understand how data loading, tokenization, the autograd engine, and the Adam optimizer fit into a single file. You can also read [this explainer](https://jerrysoer.github.io/microgpt-explainer/) to help break it down.
 
 ---
 
@@ -83,18 +92,20 @@ pip install tiktoken
 
 ---
 
-## 3. Interview Questions
+## 3. FAANG & Enterprise Interview Questions
 
-_Self-Check: Can you answer these confidently?_
+_Self-Check: Can you answer these confidently? These are actual questions asked for AI Engineering roles at leading tech companies._
 
-1.  **Q**: "Why can't an LLM do math perfectly?"
-    - _Hint_: Think about how "1000" vs "100" vs "1" are tokenized. They don't have intrinsic numerical value to the model, just token IDs.
-2.  **Q**: "What is the 'Context Window' and why does it matter for an Agent?"
-    - _Hint_: It's the short-term memory limit. If your RAG retrieves too many docs, you crash.
-3.  **Q**: "Explain Self-Attention to a 5-year-old."
-    - _Hint_: It's like reading a sentence and focusing on relevant words to understand the current word.
-4.  **Q**: "What is the difference between Pre-training and Fine-tuning?"
-    - _Hint_: Learning the language vs Learning to follow instructions.
+1.  **Q**: "Explain the mathematical difference between Self-Attention and Cross-Attention in the Transformer architecture. When would you use one over the other?"
+    - _Hint_: Think about Q, K, V matrices. Self-attention relates a sequence to itself. Cross-attention relates two different sequences (like in translation tasks).
+2.  **Q**: "How does KV-caching optimize autoregressive generation in LLMs, and what are the memory tradeoffs in production?"
+    - _Hint_: You shouldn't recompute the Key and Value matrices for prior tokens every time you generate a new token. But storing them takes up GPU VRAM.
+3.  **Q**: "Why can't an LLM do math perfectly, and how does the tokenization of numbers affect this?"
+    - _Hint_: Think about how "1000" vs "100" vs "1" are tokenized. If "380" is one token, the model doesn't inherently understand it represents 3 hundreds, 8 tens, and 0 ones.
+4.  **Q**: "Explain the objective function used in Reinforcement Learning from Human Feedback (RLHF). Why use PPO over standard Supervised Fine-Tuning?"
+    - _Hint_: SFT teaches the model _how_ to talk. RLHF aligns it with _what_ humans actually prefer (safety, tone, helpfulness), using a separate Reward Model.
+5.  **Q**: "What is the 'Context Window' and how do techniques like RoPE (Rotary Position Embedding) help extend it?"
+    - _Hint_: It's the short-term memory limit. RoPE injects relative positional information directly into attention matrices, allowing for better extrapolation to larger contexts than standard absolute embeddings.
 
 ---
 
