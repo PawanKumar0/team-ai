@@ -1,23 +1,14 @@
-# System Design Track
+# System Design Reference
 
-As an Enterprise AI Engineer, understanding how to build scalable, distributed, and fault-tolerant software systems is just as important as understanding Neural Networks. This track runs parallel to your AI modules.
+This folder serves as a persistent technical reference for the core engineering principles needed to build enterprise-scale software.
 
-## Goal
-
-To build the core software engineering and architectural skills required to deploy and maintain production-grade AI applications and multi-agent systems at scale.
-
----
-
-## 📚 Core Resources
-
-### 1. The Blueprint
+## 1. Core Roadmap
 
 - **Guide**: [System Design Guide by Ankit Pangasa](https://www.linkedin.com/posts/ankit-pangasa_want-to-become-good-at-system-design-activity-7429891390429593600-Vss9?utm_source=share&utm_medium=member_ios&rcm=ACoAABCo6bYBh04t-qQbMdjohMTr26eF3DwAnh8)
-  _(Start here to understand the roadmap from networking basics to complex microservices and databases)._
 
-### 1.5 Deep Dive Real-World System Videos
+## 2. Real-World Case Studies (YouTube Deep Dives)
 
-_(All curated from the guide above)_
+The following links are invaluable for understanding how major platforms work:
 
 - [ ] **Stock Exchange** (Low latency, matching engines): [Video Link](https://lnkd.in/gCXk-Pti)
 - [ ] **Payment Systems** (Idempotency, consistency): [Video Link](https://lnkd.in/gxmrEKS4)
@@ -28,7 +19,7 @@ _(All curated from the guide above)_
 - [ ] **Uber** (Geospatial indexing): [Video Link](https://lnkd.in/gGcy4s3V)
 - [ ] **Amazon S3 / LLM Systems** (Storage, Inference scaling): [Video Link](https://lnkd.in/gZbQ5Q4M)
 
-### 2. High-Level Concepts to Master
+## 3. Key Concepts to Master
 
 - [ ] **Networking Basics**: TCP/IP, DNS, HTTP/HTTPS, WebSockets.
 - [ ] **API Design**: REST vs GraphQL vs gRPC.
@@ -52,6 +43,14 @@ _As you progress through your AI Modules, you will be expected to implement syst
 1. **Draw the Architecture**: Whiteboard the architecture for the Multi-Agent squad (Super Agent, Dev, Ops, Reviewer) we are building in Phase 2.
 2. **Setup your environment**: Initialize Docker configurations for your future services.
 
+- **Networking**: TCP/IP, DNS, HTTP/HTTPS, WebSockets.
+- **Microservices**: Service discovery, Rate Limiting, API Gateways.
+- **Databases**: Relational vs NoSQL, High Availability (HA), Sharding vs Partitioning.
+- **Caching**: Redis, Memcached, CDN distribution.
+- **Event-Driven**: Message queues (Kafka, RabbitMQ, SQS).
+- **Security**: OAuth2, JWT, TLS termination, Rate Limiting.
+- **Infrastructure**: Docker, Kubernetes, CI/CD, Infrastructure as Code (Terraform).
 
 # raw links
+
 1. https://www.threads.com/@systemdesignone/post/DVGkMHJiCGG?xmt=AQF0RI3uGA9O5_xXU0-ZzEJ-pz-68U2tNuGnbk_yNsnCpoF1ykpY3_4g-DRM4hhiKM0RjXIB&slof=1
