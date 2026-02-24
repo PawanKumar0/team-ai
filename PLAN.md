@@ -10,19 +10,17 @@ This document serves as the roadmap, curriculum, and progress tracker for buildi
 
 Our goal is not just a script; it is a full, scalable product.
 
-- **Frontend/Dashboard**: Next.js (React), TailwindCSS, Shadcn UI for managing agent tasks, viewing analytics, and billing.
+- **Frontend/Dashboard**: Next.js (React), TailwindCSS, Shadcn UI for managing agent tasks, viewing analytics, **Token Cost Metrics**, and **Dynamic Model Selection**.
 - **Backend/API Tier**: Node/Python or Go API Gateway. Clerk/Auth0 for user authentication. Stripe for billing.
 - **AI Core (LangGraph/Agents)**:
-  - **Super Agent**: The orchestrator and planner.
-  - **Dev Agent**: Writes and modifies code.
-  - **QA Agent**: Reviews code for bugs and security issues.
-  - **Researcher Agent**: RAG specialist for searching documentation.
+  - **Super Agent**: The orchestrator and planner. Uses **LiteLLM** for dynamic routing between GPT-4o and Claude-3.5 native tools.
+  - **"Agent as an Employee"**: Specialized workers (Dev, QA, Researcher) with explicit restrictions, constrained tools, and specialized model routing profiles.
 - **Data & Memory Layer**:
   - PostgreSQL (Relational data, user accounts, billing).
   - Pinecone/Qdrant (Vector DB for RAG and Long-term agent memory).
   - Redis (Caching and fast Pub/Sub agent communication).
 - **Security & Sandboxing**: Docker-in-Docker (or gVisor VM isolates) to safely execute the code the Dev Agent writes.
-- **Observability & Ops**: AWS/EKS (Kubernetes) for hosting. LangSmith for tracing LLM prompts. Datadog/Prometheus for system health.
+- **Observability & Ops**: AWS/EKS (Kubernetes) for hosting. **Helicone / Langfuse** for tracking exact LLM token spending per agent. Datadog/Prometheus for system health.
 
 ---
 
@@ -36,11 +34,11 @@ All production code lives in `src/`. Each `sprint-X` folder acts as your workben
 
 - **Status**: ⏳ Pending
 
-### Sprint 2: The Core LLM Engine & Orchestrator
+### Sprint 2: Core LLM Engine & Dynamic Routing
 
-**Goal**: Build the basic text-generation loop. The Orchestrator can take a prompt, call Anthropic/OpenAI APIs, and use basic tools (Model Context Protocol).
+**Goal**: Build the basic text-generation loop. The Orchestrator can take a prompt, call Anthropic/OpenAI APIs, dynamically route models (LiteLLM), and use basic tools (Model Context Protocol).
 
-- **JIT Learning**: [Prompt Engineering Guides (Anthropic/OpenAI)](https://lnkd.in/gsnasAV6), [MicroGPT implementation](https://www.linkedin.com/posts/shubshrivastava_most-beautiful-code-i-have-seen-shared-in-activity-7429424991537913856-sIAt?utm_source=share&utm_medium=member_ios&rcm=ACoAABCo6bYBh04t-qQbMdjohMTr26eF3DwAnh8).
+- **JIT Learning**: [Prompt Engineering Guides (Anthropic/OpenAI)](https://lnkd.in/gsnasAV6), [LiteLLM Docs](https://docs.litellm.ai/docs/routing).
 - **Status**: ⏳ Pending
 
 ### Sprint 3: Identity, Auth, & Billing
@@ -57,18 +55,18 @@ All production code lives in `src/`. Each `sprint-X` folder acts as your workben
 - **JIT Learning**: [Attention Is All You Need (Paper)](https://lnkd.in/gXUccydp), [Andrew Ng/Karpathy's Neural Net Deep Dives](https://lnkd.in/gwqSPS4J).
 - **Status**: ⏳ Pending
 
-### Sprint 5: LangGraph Multi-Agent Communication
+### Sprint 5: Multi-Agent "Agent as an Employee" Architecture
 
-**Goal**: Introduce the Dev and QA agents. Use LangGraph (or similar framework) to allow the Orchestrator to route tasks to these specialized agents and handle their asynchronous responses.
+**Goal**: Introduce the Dev and QA agents. Use LangGraph to treat these agents as distinct employees with constrained allowable models and specific tool access.
 
 - **JIT Learning (System Design)**: [Kafka (Event streaming, brokers)](https://lnkd.in/gBiu9ePG), [LazyCPU's Agent Substack](https://open.substack.com/pub/lazycpu/p/a-simple-agent-part-1?utm_campaign=post&utm_medium=web).
 - **Status**: ⏳ Pending
 
 ### Sprint 6: Dynamic UI & Real-Time Dashboard
 
-**Goal**: Build the Next.js frontend where users can watch the agents talk to each other and execute tasks in real-time.
+**Goal**: Build the Next.js frontend where users can watch the agents talk to each other in real-time, select LLM preferences, and track token spend metrics.
 
-- **JIT Learning (System Design)**: [WebSockets, CRDTs (Google Docs/WhatsApp architecture)](https://lnkd.in/g-iF2XVm).
+- **JIT Learning (System Design)**: [WebSockets, CRDTs (Google Docs/WhatsApp architecture)](https://lnkd.in/g-iF2XVm), [Helicone/Langfuse Docs](https://docs.helicone.ai/).
 - **Status**: ⏳ Pending
 
 ### Sprint 7: Secure Sandboxing & Execution
@@ -80,7 +78,7 @@ All production code lives in `src/`. Each `sprint-X` folder acts as your workben
 
 ### Sprint 8: Production Deployment & Observability
 
-**Goal**: Deploy the system to AWS/Kubernetes. Add LangSmith to trace token usage and Datadog for API monitoring.
+**Goal**: Deploy the system to AWS/Kubernetes. Add Langfuse/Helicone to trace exact token usage per agent and Datadog for API monitoring.
 
 - **JIT Learning (System Design)**: [LLM Systems Inference scaling](https://lnkd.in/gZbQ5Q4M), Load balancing, API Rate Limiting.
 - **Books**: [AI Engineering by Chip Huyen](https://lnkd.in/g-MRviYk), [LLM Engineering Handbook](https://lnkd.in/gyA4vFXz).
