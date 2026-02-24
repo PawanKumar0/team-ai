@@ -51,3 +51,7 @@ _As you progress through your AI Modules, you will be expected to implement syst
 
 1. **Draw the Architecture**: Whiteboard the architecture for the Multi-Agent squad (Super Agent, Dev, Ops, Reviewer) we are building in Phase 2.
 2. **Setup your environment**: Initialize Docker configurations for your future services.
+
+
+# raw links
+1. https://www.threads.com/@systemdesignone/post/DVGkMHJiCGG?xmt=AQF0RI3uGA9O5_xXU0-ZzEJ-pz-68U2tNuGnbk_yNsnCpoF1ykpY3_4g-DRM4hhiKM0RjXIB&slof=1
