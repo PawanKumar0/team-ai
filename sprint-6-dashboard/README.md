@@ -2,7 +2,7 @@
 
 ## 🎯 Objective
 
-We need a frontend so users can visualize the agents thinking and working. We will build a Next.js dashboard featuring real-time websocket streams, so you can see the Dev Agent typing code live. Crucially, we will add **Enterprise Metrics Dashboards** and **Model Selection** settings.
+We need a frontend so users can visualize and manage their AI workforce. We will build a Next.js dashboard featuring real-time websocket streams, so you can see agents typing live. Crucially, we will add **Comprehensive Metrics Dashboards** (individual vs. aggregated) and **API Key Management** for different LLMs.
 
 ## 🧠 JIT (Just-In-Time) Learning
 
@@ -21,8 +21,10 @@ _When you are ready to start coding this sprint, copy the prompt below and paste
 
 > Let's build a beautiful SaaS dashboard tracking our AI Agents!
 >
-> 1. In `src/web/`, build a complex Dashboard page (using Shadcn UI).
-> 2. **Settings Panel:** Add a UI to allow the user to select their preferred LLM from a pool (e.g., GPT-4o, Claude-3.5) for specific agent roles.
-> 3. **Metrics Dashboard:** Build a view that displays "Agent Performance" (tasks completed vs failed) and "Token Cost Metrics" (using mock data for now) to show daily spend per model.
+> 1. In `src/web/`, build a complex Dashboard layout (using Shadcn UI).
+> 2. **Provider Settings & Routing:** Add a UI to input API Keys (OpenAI, Anthropic, Gemini, OpenRouter) and assign a default LLM from the pool to specific agent roles (e.g. QA uses Claude, Dev uses Gemini).
+> 3. **Metrics Views:** Build two distinct metric screens pulling from our Langfuse/Helicone logs:
+>    - **"Global Workforce Metrics":** Total tokens spent across all agents, aggregate fail/success rate, and the best performing LLM model overall.
+>    - **"Individual Employee View":** Drill down into a specific agent (e.g. "Dev Agent 1"). Show their specific cost metrics, latency timeline, and a log of their individual tasks.
 > 4. Set up a WebSocket connection between the Next.js frontend and the Node.js APIGateway.
-> 5. Modify the LangGraph setup so that every state change emits an event over the WebSocket. The Next.js frontend should display a live "Agent Status" log.
+> 5. Modify the LangGraph setup so that every state change emits an event over the WebSocket, displaying a live "Activity Feed."
