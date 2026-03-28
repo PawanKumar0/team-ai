@@ -1,0 +1,14 @@
+{
+  "project_name": "team-ai",
+  "goal": "Build a production-level AI product and transform the user into an AI engineer through JIT learning.",
+  "workflow_preferences": {
+    "research_depth": "comprehensive",
+    "learning_mode": "JIT (Just-In-Time)",
+    "ui_aesthetic": "Modern Professional"
+  },
+  "research_sources": [
+    "https://github.com/affaan-m/everything-claude-code",
+    "https://www.instagram.com/reel/DURb_4eD87y/",
+    "https://www.instagram.com/p/DT9hZPyCuDM/"
+  ]
+}
