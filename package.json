@@ -2,9 +2,14 @@
   "name": "team-ai-monorepo",
   "private": true,
   "scripts": {
-    "build": "turbo build",
-    "dev": "turbo dev",
-    "lint": "turbo lint",
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "dev:web": "pnpm --filter web dev",
+    "dev:api": "pnpm --filter @team-ai/api dev",
+    "build:web": "pnpm --filter web build",
+    "build:api": "pnpm --filter @team-ai/api build",
+    "lint": "turbo run lint",
+    "test:types": "pnpm --filter @team-ai/types test",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {

@@ -1,25 +1,101 @@
-# AI Agent Team - Product Source Code
+# Source Code Plan
 
-This directory (`src/`) contains the production-grade code for the **AI Tech Team** system.
+This directory is the production code area for Team AI.
 
-## 🏆 Engineering Standards
+Do not treat `src/` as a playground.
+Treat it as the system that should eventually power the product described in the roadmap.
 
-Unlike the `learning/` directory (which contains experiments and messy scripts), code in `src/` must be **Enterprise Ready**:
+## Current Starting Point
 
-1.  **TypeScript**: All code must be strictly typed.
-2.  **Testing**: Unit tests (Vitest) are required for all core logic.
-3.  **Documentation**: JSDoc for all functions; comprehensive READMEs for modules.
-4.  **Architecture**: Follows the **Clean Architecture** or **Hexagonal** patterns.
-    - _Domain_: Core business logic (Agents, Tasks).
-    - _Infrastructure_: DB adapters, LLM API clients.
-    - _Interface_: API/CLI adapters.
+The repo already has a useful scaffold:
 
-## 📂 Structure
+- `src/web`
+  - Next.js UI
+- `src/api`
+  - Express API gateway
+- `src/packages/types`
+  - shared types and schemas
 
-```
-src/
-├── core/           # Domain entities (Agent, Task, Memory)
-├── infra/          # LLM Providers (OpenAI, Anthropic), VectorDBs
-├── interfaces/     # CLI, API, Webhook handlers
-└── utils/          # Shared utilities (Logger, Telemetry)
-```
+That is enough to start building.
+Do not delete it and rebuild for the sake of "freshness."
+
+## Fresh-Start Rule
+
+Start fresh in behavior, not by throwing away useful scaffolding.
+
+That means:
+
+- keep the existing monorepo layout
+- tighten the package boundaries
+- implement the roadmap in small vertical slices
+- remove dead code only when it actually becomes dead
+
+## Implementation Order
+
+### Phase 1
+
+Extend the current thin slice:
+
+- add assistant request and response contracts
+- add `/assist` API path
+- add a basic assistant UI
+
+### Phase 2
+
+Add grounded retrieval:
+
+- ingestion
+- indexing
+- citations
+
+### Phase 3
+
+Add workflow intelligence:
+
+- planning
+- triage
+- specialist workflows if justified
+
+### Phase 4
+
+Add production concerns:
+
+- auth
+- tenancy
+- evals
+- observability
+- deployment
+
+## Package Strategy
+
+Keep apps thin and move shared logic into packages only when it deserves a boundary.
+
+Current packages:
+
+- `src/web`
+- `src/api`
+- `src/packages/types`
+
+Likely future packages:
+
+- `src/packages/ai-core`
+- `src/packages/retrieval`
+- `src/packages/evals`
+- `src/packages/config`
+
+Do not create all of these on day 1.
+Create them only when the code actually needs them.
+
+## Rules
+
+- no app-to-app imports
+- shared contracts live in `src/packages/types`
+- shared business logic moves into packages
+- app-specific UI stays in `src/web`
+- app-specific HTTP concerns stay in `src/api`
+- install dependencies from the repo root
+- keep one lockfile at the root
+
+## Monorepo Guide
+
+Use [MONOREPO.md](/Users/pawan/Vizmo/team-ai/src/MONOREPO.md) for pnpm and Turborepo usage, commands, and boundaries.

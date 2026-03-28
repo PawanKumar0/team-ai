@@ -97,3 +97,5 @@ Every major product change should answer all four:
 ## Next File
 
 Use [TRACKER.md](/Users/pawan/Vizmo/team-ai/threads/00-main-thread/TRACKER.md) as the weekly command center.
+
+Use [WEEKLY-OPERATING-SYSTEM.md](/Users/pawan/Vizmo/team-ai/threads/00-main-thread/WEEKLY-OPERATING-SYSTEM.md) for the repeatable weekly pattern.

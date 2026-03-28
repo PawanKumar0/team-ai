@@ -6,6 +6,7 @@ Use it with:
 
 - [README.md](/Users/pawan/Vizmo/team-ai/threads/00-main-thread/README.md)
 - [TRACKER.md](/Users/pawan/Vizmo/team-ai/threads/00-main-thread/TRACKER.md)
+- [WEEKLY-OPERATING-SYSTEM.md](/Users/pawan/Vizmo/team-ai/threads/00-main-thread/WEEKLY-OPERATING-SYSTEM.md)
 
 ## Week 1: Product Wedge, Thin Slice, and Architecture Baseline
 
