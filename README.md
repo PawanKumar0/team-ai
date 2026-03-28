@@ -1,41 +1,75 @@
-# AI Agent Tech Team
+# Team AI
 
-This repository contains the learning resources, experiments, and source code for building an autonomous, enterprise-ready AI Tech Team.
+This repository is the operating system for a 60-day transformation:
 
-## 🎯 Current Focus: Enterprise AI-Team Blueprint
+- become a strong AI engineer by building real systems
+- become better at system design by tying every concept to the product
+- grow toward senior/staff engineering by writing, deciding, and shipping like one
 
-**Active Sprint**: [Sprint 1: Architecture & Repo Setup](./sprint-1-setup/README.md)
+The old repo was mostly a loose sprint list. The new repo is organized around one main execution thread and a small set of support threads.
 
-- _Objective_: Initialize the frontend (Next.js), auth, and database architecture.
-- _Status_: 🚧 In Progress
+## North Star
 
-## 🚀 How to Use This Repository
+By day 60, you should be able to:
 
-Please refer to [PLAN.md](./PLAN.md) for the detailed 8-Sprint enterprise roadmap.
+- ship a production-minded AI product with clear scope and ROI
+- explain trade-offs in AI systems, backend systems, and distributed systems
+- show staff-level artifacts: product brief, design doc, ADRs, evals, launch plan, postmortem
+- prove learning with code, demos, docs, metrics, and weekly reviews
 
-**The Workflow:**
-All production code lives in `src/`. Each `sprint-X` folder acts as your workbench, containing the specific JIT reading materials and the exact prompt to use to start coding that specific sprint. Additionally, the `learning/` folder contains standalone reference material (like the System Design Masterclass) for deep dives.
+## Product Thesis
 
-1. Open the current `sprint-X/README.md` file.
-2. Read the "JIT (Just-In-Time) Learning" links required for that module.
-3. Copy the **"Initial Kickoff Prompt"** provided at the bottom of the sprint README.
-4. Paste the prompt into your AI agent or terminal to instruct it to generate the code for that sprint.
-5. All actual, working code will be generated inside the `src/` directory.
+The main project is now:
 
-## 📂 Repository Structure
+**Team AI: an engineering intelligence copilot for internal teams**
+
+It is not a fantasy "fully autonomous AI company" on day 1.
+It starts as a focused product that can create real value:
+
+- answer engineering questions over docs, repos, runbooks, and tickets
+- return cited answers and implementation plans
+- triage tickets and incidents
+- later grow into workflow agents and selective multi-agent collaboration
+
+This scope is better for learning and better for ROI.
+
+## Start Here
+
+1. Read [PLAN.md](/Users/pawan/Vizmo/team-ai/PLAN.md)
+2. Open [threads/00-main-thread/TRACKER.md](/Users/pawan/Vizmo/team-ai/threads/00-main-thread/TRACKER.md)
+3. Use [threads/04-resource-map/README.md](/Users/pawan/Vizmo/team-ai/threads/04-resource-map/README.md) to prune your resource dump
+4. Log work using [journal/README.md](/Users/pawan/Vizmo/team-ai/journal/README.md)
+5. When you need the full week-by-week guide, use [threads/00-main-thread/WEEK-BY-WEEK.md](/Users/pawan/Vizmo/team-ai/threads/00-main-thread/WEEK-BY-WEEK.md)
+
+## Repo Structure
 
 ```text
 .
-├── PLAN.md                 # Master 8-Sprint Architecture Plan
-├── src/                    # The "AI Tech Team" Production Code (Target Directory)
-│   ├── web/                # Next.js Dashboard & Frontend
-│   ├── api/                # API Gateway, Auth, & Billing
-│   └── agents/             # The LangGraph Multi-Agent Core
-├── sprint-1-setup/         # Start Here!
-├── sprint-2-orchestrator/
-├── sprint-3-identity-billing/
-├── learning/               # Standalone Technical Reference (System Design)
-│   └── system-design/
-├── ... (sprints 4-8)
-└── docs/                   # Documentation & Research Papers
+├── PLAN.md
+├── threads/
+│   ├── 00-main-thread/        # Main product thread and weekly tracker
+│   ├── 01-ai-engineering/     # AI engineering competency roadmap
+│   ├── 02-system-design/      # General + AI system design practice
+│   ├── 03-staff-engineering/  # Staff-level writing, scope, and leadership
+│   ├── 04-resource-map/       # Curated resources from your dump + additions
+│   ├── 05-global-job-hunt/    # Activated toward the end of the roadmap
+│   └── 06-ai-interview-bank/  # AI engineer interview prep, architecture-heavy
+├── journal/
+│   └── templates/             # Daily log, weekly review, design review, experiment card
+├── src/                       # Product code
+├── sprint-*/                  # Legacy plan folders kept as reference
+└── learning/                  # Legacy learning folders, now secondary
 ```
+
+## Rules
+
+- Build one product deeply instead of ten disconnected demos.
+- Prefer simple workflows before multi-agent systems.
+- Add evals and observability before fancy orchestration.
+- Use system design as a tool for product decisions, not as a separate hobby.
+- Write down decisions, trade-offs, metrics, and failures.
+- Activate job hunt and interview prep after the build creates proof.
+
+## Legacy Note
+
+The existing `sprint-*` folders are preserved as legacy reference material. They are no longer the source of truth for execution order.

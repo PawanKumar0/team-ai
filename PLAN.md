@@ -1,91 +1,256 @@
-# AI Tech Team & Super Agent: Enterprise Master Plan
+# 60-Day Roadmap
 
-This document serves as the roadmap, curriculum, and progress tracker for building an autonomous, enterprise-ready AI Tech Team SaaS.
+This file is the source of truth for the next two months.
 
-**Learning Philosophy:** _Build First, Learn JIT (Just-In-Time)._ We build the system sprint-by-sprint. The theory (Math, Transformers, System Design) is explicitly attached to the sprint where that knowledge is actually used.
+## Mission
 
----
+Turn a strong engineer into a stronger AI engineer and architect by shipping one serious product while building staff-level habits:
 
-## 🏗 Enterprise Architecture Overview
+- product thinking
+- architecture thinking
+- system design
+- technical writing
+- evaluation discipline
+- delivery discipline
 
-Our goal is not just a script; it is a full, scalable product.
+## Why The Old Flow Was Weak
 
-- **Frontend/Dashboard**: Next.js (React), TailwindCSS, Shadcn UI for managing agent tasks, viewing analytics, **Token Cost Metrics**, and **Dynamic Model Selection**.
-- **Backend/API Tier**: Node/Python or Go API Gateway. Clerk/Auth0 for user authentication. Stripe for billing.
-- **AI Core (LangGraph/Agents)**:
-  - **Super Agent**: The orchestrator and planner. Uses **LiteLLM** for dynamic routing between GPT-4o and Claude-3.5 native tools.
-  - **"Agent as an Employee"**: Specialized workers (Dev, QA, Researcher) with explicit restrictions, constrained tools, and specialized model routing profiles.
-- **Data & Memory Layer**:
-  - PostgreSQL (Relational data, user accounts, billing).
-  - Pinecone/Qdrant (Vector DB for RAG and Long-term agent memory).
-  - Redis (Caching and fast Pub/Sub agent communication).
-- **Security & Sandboxing**: Docker-in-Docker (or gVisor VM isolates) to safely execute the code the Dev Agent writes.
-- **Observability & Ops**: AWS/EKS (Kubernetes) for hosting. **Helicone / Langfuse** for tracking exact LLM token spending per agent. Datadog/Prometheus for system health.
+The old plan had energy but weak sequencing:
 
----
+- too much framework-first thinking
+- too much "enterprise architecture" before a real product wedge
+- no strong motivation loop
+- no explicit weekly proof of progress
+- no separate lane for staff-level growth
 
-## 🏃‍♂️ The 8-Sprint Roadmap (Our Execution Plan)
+That creates fake complexity and low momentum.
 
-All production code lives in `src/`. Each `sprint-X` folder acts as your workbench, containing the specific JIT reading materials and the exact prompt to use to start coding that specific sprint.
+## New Operating Model
 
-### Sprint 1: Architecture & Repo Setup
+Assumption: about 18 to 20 focused hours per week.
 
-**Goal**: Initialize the Next.js frontend, backend API gateway structure, Docker-compose for local development, and basic database (Postgres) schemas.
+There are four core threads and two late-stage threads:
 
-- **Status**: ⏳ Pending
+1. `00-main-thread`
+   The product. This is the driver. Every week must improve the product.
+2. `01-ai-engineering`
+   The AI concepts and implementation patterns you must learn just in time.
+3. `02-system-design`
+   The distributed systems and interview-style design work tied to the current build.
+4. `03-staff-engineering`
+   The writing, trade-off, prioritization, and leadership muscle that separates senior from staff.
+5. `05-global-job-hunt`
+   Activate near the end so the project becomes a job-search asset, not a distraction.
+6. `06-ai-interview-bank`
+   A company-style question bank focused on AI architecture, system design, and staff-level judgment.
 
-### Sprint 2: Core LLM Engine & Dynamic Routing
+`04-resource-map` exists to keep your input stream clean.
 
-**Goal**: Build the basic text-generation loop. The Orchestrator can take a prompt, call Anthropic/OpenAI APIs, dynamically route models (LiteLLM), and use basic tools (Model Context Protocol).
+## Main Product
 
-- **JIT Learning**: [Prompt Engineering Guides (Anthropic/OpenAI)](https://lnkd.in/gsnasAV6), [LiteLLM Docs](https://docs.litellm.ai/docs/routing).
-- **Status**: ⏳ Pending
+Build **Team AI**, an engineering intelligence copilot for internal teams.
 
-### Sprint 3: Identity, Auth, & Billing
+Core user jobs:
 
-**Goal**: Lock down the APIs. Integrate Clerk for user logins and Stripe for SaaS subscriptions.
+- ask questions over engineering docs, repos, and runbooks
+- get cited answers and concrete next steps
+- triage tickets and incidents
+- draft implementation plans and architecture notes
+- later delegate bounded sub-tasks to specialist workflows or remote agents
 
-- **JIT Learning (System Design)**: [Payment Systems (Idempotency, consistency)](https://lnkd.in/gxmrEKS4).
-- **Status**: ⏳ Pending
+Why this project is the right wedge:
 
-### Sprint 4: RAG & Long-Term Memory
+- strong ROI story
+- realistic enterprise use case
+- covers RAG, memory, tools, workflows, auth, evals, observability, deployment
+- exposes real system design trade-offs
+- can later expand into multi-agent and A2A without starting there
 
-**Goal**: Connect the agents to a Vector Database (Pinecone/Qdrant) so they can read documentation and remember past conversations.
+## Non-Negotiables
 
-- **JIT Learning**: [Attention Is All You Need (Paper)](https://lnkd.in/gXUccydp), [Andrew Ng/Karpathy's Neural Net Deep Dives](https://lnkd.in/gwqSPS4J).
-- **Status**: ⏳ Pending
+- Start with one good workflow before building agent swarms.
+- Instrument cost, latency, quality, and failure paths early.
+- Every meaningful decision gets a written rationale.
+- Every week produces code, design work, and a visible artifact.
+- Human approval stays in the loop for writes, deletes, and sensitive actions.
+- Treat MCP as agent-to-tool plumbing and A2A as remote agent interoperability, not interchangeable buzzwords.
 
-### Sprint 5: Multi-Agent "Agent as an Employee" Architecture
+## 8-Week Execution Plan
 
-**Goal**: Introduce the Dev and QA agents. Use LangGraph to treat these agents as distinct employees with constrained allowable models and specific tool access.
+The summary below is the high-level view.
+The detailed playbook lives in [threads/00-main-thread/WEEK-BY-WEEK.md](/Users/pawan/Vizmo/team-ai/threads/00-main-thread/WEEK-BY-WEEK.md).
 
-- **JIT Learning (System Design)**: [Kafka (Event streaming, brokers)](https://lnkd.in/gBiu9ePG), [LazyCPU's Agent Substack](https://open.substack.com/pub/lazycpu/p/a-simple-agent-part-1?utm_campaign=post&utm_medium=web).
-- **Status**: ⏳ Pending
+### Week 1: Scope, Architecture, and Repo Discipline
 
-### Sprint 6: Dynamic UI & Real-Time Dashboard
+- Main thread:
+  - define the product wedge, ICP, top 3 user jobs, and success metric
+  - confirm monorepo/dev workflow and thin end-to-end request path
+  - write architecture v1 and product brief
+- AI engineering:
+  - LLM APIs, structured outputs, prompt contracts, tool calling basics
+- System design:
+  - API gateways, request lifecycle, SLO thinking, timeouts/retries/idempotency
+- Staff engineering:
+  - product brief and architecture overview
+- Exit criteria:
+  - one request can travel UI -> API -> stubbed orchestration -> UI
+  - product brief and architecture doc exist in repo
 
-**Goal**: Build the Next.js frontend where users can watch the agents talk to each other in real-time, select LLM preferences, and track token spend metrics.
+### Week 2: Single-Agent Workflow and Evaluation Harness
 
-- **JIT Learning (System Design)**: [WebSockets, CRDTs (Google Docs/WhatsApp architecture)](https://lnkd.in/g-iF2XVm), [Helicone/Langfuse Docs](https://docs.helicone.ai/).
-- **Status**: ⏳ Pending
+- Main thread:
+  - build a single assistant workflow for engineering Q&A and planning
+  - add structured inputs/outputs and initial evaluation set
+- AI engineering:
+  - prompt design, tool schemas, guardrails, LiteLLM or provider abstraction
+- System design:
+  - retries, backoff, rate limits, failure classification
+- Staff engineering:
+  - write first ADR: model/provider abstraction and request flow
+- Exit criteria:
+  - assistant can answer scoped questions and emit structured plans
+  - baseline eval set exists
 
-### Sprint 7: Secure Sandboxing & Execution
+### Week 3: Ingestion and RAG v1
 
-**Goal**: The Dev Agent shouldn't rewrite your actual computer. We build an isolated Docker environment for the Dev Agent to compile and run the code it generates.
+- Main thread:
+  - ingest markdown/docs/code metadata
+  - build retrieval with citations
+- AI engineering:
+  - chunking, embeddings, metadata, dense plus sparse retrieval, reranking basics
+- System design:
+  - ingestion pipeline, storage layout, async jobs, index design
+- Staff engineering:
+  - retrieval design review and ADR for vector store/retrieval strategy
+- Exit criteria:
+  - cited answers work on a small real corpus
+  - retrieval quality is measured on a small labeled set
 
-- **JIT Learning (System Design)**: OS-level virtualization, Docker internals, security boundaries.
-- **Status**: ⏳ Pending
+### Week 4: Memory, Sessions, and API Hardening
 
-### Sprint 8: Production Deployment & Observability
+- Main thread:
+  - add session model, conversation state, and production-facing API contracts
+  - separate ephemeral context from persistent memory
+- AI engineering:
+  - short-term memory, long-term memory, history compaction, context management
+- System design:
+  - stateful workflows, transactions, concurrency, API versioning
+- Staff engineering:
+  - write state model and data ownership note
+- Exit criteria:
+  - repeat sessions work
+  - memory design is explicit and bounded
 
-**Goal**: Deploy the system to AWS/Kubernetes. Add Langfuse/Helicone to trace exact token usage per agent and Datadog for API monitoring.
+### Week 5: Workflow Orchestration, MCP, and Selective Multi-Agent
 
-- **JIT Learning (System Design)**: [LLM Systems Inference scaling](https://lnkd.in/gZbQ5Q4M), Load balancing, API Rate Limiting.
-- **Books**: [AI Engineering by Chip Huyen](https://lnkd.in/g-MRviYk), [LLM Engineering Handbook](https://lnkd.in/gyA4vFXz).
-- **Status**: ⏳ Pending
+- Main thread:
+  - add bounded workflow orchestration
+  - introduce specialist roles only where they improve outcomes
+- AI engineering:
+  - LangGraph or equivalent orchestration, MCP integration, A2A fundamentals
+- System design:
+  - orchestration vs choreography, queues, workflow durability, remote contracts
+- Staff engineering:
+  - RFC: when multi-agent is justified vs overengineering
+- Exit criteria:
+  - one workflow clearly benefits from decomposition
+  - MCP tool boundary is clean
 
----
+### Week 6: Evals, Observability, and Guardrails
 
-## 📝 Progress Log
+- Main thread:
+  - add tracing, prompt versioning, online/offline evals, failure dashboards
+  - harden prompt-injection and data-exfiltration paths
+- AI engineering:
+  - Langfuse, trace-based debugging, judge-based evals, custom evals, human review
+- System design:
+  - monitoring, alerting, dashboards, quality gates, operational readiness
+- Staff engineering:
+  - operational review and risk register
+- Exit criteria:
+  - you can explain cost, latency, retrieval quality, and common failure modes
 
-- **2026-02-23**: Completely restructured repository to map to an 8-Sprint Enterprise Roadmap, defining the AI Core, UI, Identity, Memory, and Sandbox architectures.
+### Week 7: Auth, Tenancy, Security, and Deployment Path
+
+- Main thread:
+  - add auth, tenant boundaries, secrets handling, and a deployment target
+  - add sandbox rules for sensitive tools or code execution if needed
+- AI engineering:
+  - sandboxing, secret isolation, policy checks, approval flows
+- System design:
+  - multi-tenancy, authn/authz, webhooks, billing/idempotency, CI/CD
+- Staff engineering:
+  - launch checklist and go/no-go criteria
+- Exit criteria:
+  - app has a credible production path, not just localhost capability
+
+### Week 8: Launch, Portfolio, and Interview Proof
+
+- Main thread:
+  - demo-ready release
+  - final polish on UX, reliability, docs, and architecture
+- AI engineering:
+  - optimize latency and cost, failure fallbacks, stretch goal for multimodal or remote agent integration
+- System design:
+  - final system design deck and mock interviews
+- Staff engineering:
+  - case study, postmortem, and promotion-style evidence summary
+- Career activation:
+  - turn the project into job-search assets and start the global search thread
+- Interview activation:
+  - start the AI interview bank and company-style mock loops
+- Exit criteria:
+  - deployed demo or production-like environment
+  - portfolio-quality write-up and system design deck exist
+
+## Weekly Cadence
+
+Use this every week:
+
+- `Mon`: plan the slice, write the target artifact, set success metric
+- `Tue`: implement the main product change
+- `Wed`: finish implementation and add tests/evals
+- `Thu`: do system design drill and architecture review
+- `Fri`: document, demo, measure, and review
+- `Sat or Sun`: one long-form learning block plus one mock design
+
+Every week must ship:
+
+- one product increment
+- one AI engineering note or experiment
+- one system design drill
+- one staff artifact
+- one weekly review
+
+## What To Ignore For Now
+
+- generic "6 month AI engineer" reels
+- random framework hopping
+- full autonomous coding agents before retrieval, evals, and safety
+- building billing before proving the product wedge
+- polishing dashboards before traces and metrics exist
+
+## Final Outputs By Day 60
+
+- working product in `src/`
+- product brief
+- architecture overview
+- at least 3 ADRs
+- evaluation dataset and experiment log
+- observability setup
+- weekly reviews
+- system design question bank with written answers
+- portfolio case study
+
+## Navigation
+
+- Main thread: [threads/00-main-thread/README.md](/Users/pawan/Vizmo/team-ai/threads/00-main-thread/README.md)
+- Weekly tracker: [threads/00-main-thread/TRACKER.md](/Users/pawan/Vizmo/team-ai/threads/00-main-thread/TRACKER.md)
+- Detailed weekly plan: [threads/00-main-thread/WEEK-BY-WEEK.md](/Users/pawan/Vizmo/team-ai/threads/00-main-thread/WEEK-BY-WEEK.md)
+- AI engineering: [threads/01-ai-engineering/README.md](/Users/pawan/Vizmo/team-ai/threads/01-ai-engineering/README.md)
+- System design: [threads/02-system-design/README.md](/Users/pawan/Vizmo/team-ai/threads/02-system-design/README.md)
+- Staff engineering: [threads/03-staff-engineering/README.md](/Users/pawan/Vizmo/team-ai/threads/03-staff-engineering/README.md)
+- Resources: [threads/04-resource-map/README.md](/Users/pawan/Vizmo/team-ai/threads/04-resource-map/README.md)
+- Global job hunt: [threads/05-global-job-hunt/README.md](/Users/pawan/Vizmo/team-ai/threads/05-global-job-hunt/README.md)
+- AI interview bank: [threads/06-ai-interview-bank/README.md](/Users/pawan/Vizmo/team-ai/threads/06-ai-interview-bank/README.md)
+- Journal system: [journal/README.md](/Users/pawan/Vizmo/team-ai/journal/README.md)
