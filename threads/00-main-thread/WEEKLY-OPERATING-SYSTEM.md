@@ -7,6 +7,7 @@ Use it with:
 - [WEEK-BY-WEEK.md](/Users/pawan/Vizmo/team-ai/threads/00-main-thread/WEEK-BY-WEEK.md)
 - [TRACKER.md](/Users/pawan/Vizmo/team-ai/threads/00-main-thread/TRACKER.md)
 - [WEEK-SPECIFIC-TEMPLATE.md](/Users/pawan/Vizmo/team-ai/threads/00-main-thread/WEEK-SPECIFIC-TEMPLATE.md)
+- [WEEK-KICKOFF-PROMPT.md](/Users/pawan/Vizmo/team-ai/threads/00-main-thread/WEEK-KICKOFF-PROMPT.md)
 
 ## Every Week Has 8 Parts
 
@@ -132,5 +133,6 @@ Move only when the current week's exit criteria are satisfied.
 Whenever a new `week-N/README.md` is created, start from:
 
 - [WEEK-SPECIFIC-TEMPLATE.md](/Users/pawan/Vizmo/team-ai/threads/00-main-thread/WEEK-SPECIFIC-TEMPLATE.md)
+- [WEEK-KICKOFF-PROMPT.md](/Users/pawan/Vizmo/team-ai/threads/00-main-thread/WEEK-KICKOFF-PROMPT.md)
 
 That keeps every week aligned to the same 8-part operating model.

@@ -2,9 +2,7 @@
 
 ## Short Answer
 
-Yes, `pnpm` plus `turbo` is the right default for this repository.
-
-As of March 28, 2026, that combination is still a strong setup for a TypeScript monorepo:
+Still a strong setup for a TypeScript monorepo:
 
 - `pnpm` gives you workspace support, the `workspace:` protocol, and powerful package filtering
 - `turbo` gives you task orchestration, caching, and parallel execution across the workspace
@@ -151,7 +149,7 @@ This avoids fake progress from deleting and re-scaffolding.
 
 ## References
 
-- pnpm workspaces: <https://pnpm.io/workspaces>
-- pnpm filtering: <https://pnpm.io/filtering>
-- Turborepo docs: <https://turborepo.dev/docs>
-- Turborepo configuring tasks: <https://turborepo.dev/docs/crafting-your-repository/configuring-tasks>
+- pnpm workspaces: [https://pnpm.io/workspaces](https://pnpm.io/workspaces)
+- pnpm filtering: [https://pnpm.io/filtering](https://pnpm.io/filtering)
+- Turborepo docs: [https://turborepo.dev/docs](https://turborepo.dev/docs)
+- Turborepo configuring tasks: [https://turborepo.dev/docs/crafting-your-repository/configuring-tasks](https://turborepo.dev/docs/crafting-your-repository/configuring-tasks)
