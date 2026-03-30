@@ -16,6 +16,7 @@ Status labels:
 | --- | --- | --- | --- |
 | `amitshekhariitbhu/ai-engineering-interview-questions` | Core | 01, 06 | Good public bank for AI interview prep and concept review |
 | `affaan-m/everything-claude-code` | Core | 01, 03 | Strong reference for agent workflows and context discipline |
+| `rohitg00/ai-engineering-from-scratch` | Core | 01, weeks 1-8 | Best used as a structured supplementary curriculum, especially Phases 11, 13, 14, 16, 17, 19 |
 | `GetStream/Vision-Agents` | Optional | 01, Week 8 stretch | Useful if you add multimodal later |
 | `systemdesign42/system-design` | Optional | 02 | Good supplementary reading |
 | Nir Diamant RAG Techniques | Core | 01, Week 3 | Useful for retrieval experiments |

@@ -66,6 +66,17 @@ Staff requires more:
 - portfolio case study
 - promotion-style evidence summary
 
+## Week Files
+
+- [week-1/README.md](/Users/pawan/Vizmo/team-ai/threads/03-staff-engineering/week-1/README.md)
+- [week-2/README.md](/Users/pawan/Vizmo/team-ai/threads/03-staff-engineering/week-2/README.md)
+- [week-3/README.md](/Users/pawan/Vizmo/team-ai/threads/03-staff-engineering/week-3/README.md)
+- [week-4/README.md](/Users/pawan/Vizmo/team-ai/threads/03-staff-engineering/week-4/README.md)
+- [week-5/README.md](/Users/pawan/Vizmo/team-ai/threads/03-staff-engineering/week-5/README.md)
+- [week-6/README.md](/Users/pawan/Vizmo/team-ai/threads/03-staff-engineering/week-6/README.md)
+- [week-7/README.md](/Users/pawan/Vizmo/team-ai/threads/03-staff-engineering/week-7/README.md)
+- [week-8/README.md](/Users/pawan/Vizmo/team-ai/threads/03-staff-engineering/week-8/README.md)
+
 ## Staff Habits To Build
 
 - write before building when the decision is expensive

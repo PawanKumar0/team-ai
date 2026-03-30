@@ -10,6 +10,17 @@ The fastest way to improve your odds outside India is to create stronger proof f
 - light prep: Week 7
 - real activation: Week 8 and after
 
+## Week Files
+
+- [week-1/README.md](/Users/pawan/Vizmo/team-ai/threads/05-global-job-hunt/week-1/README.md)
+- [week-2/README.md](/Users/pawan/Vizmo/team-ai/threads/05-global-job-hunt/week-2/README.md)
+- [week-3/README.md](/Users/pawan/Vizmo/team-ai/threads/05-global-job-hunt/week-3/README.md)
+- [week-4/README.md](/Users/pawan/Vizmo/team-ai/threads/05-global-job-hunt/week-4/README.md)
+- [week-5/README.md](/Users/pawan/Vizmo/team-ai/threads/05-global-job-hunt/week-5/README.md)
+- [week-6/README.md](/Users/pawan/Vizmo/team-ai/threads/05-global-job-hunt/week-6/README.md)
+- [week-7/README.md](/Users/pawan/Vizmo/team-ai/threads/05-global-job-hunt/week-7/README.md)
+- [week-8/README.md](/Users/pawan/Vizmo/team-ai/threads/05-global-job-hunt/week-8/README.md)
+
 ## Goal
 
 Turn Team AI into a globally marketable AI-engineering portfolio and use it to target roles outside India.

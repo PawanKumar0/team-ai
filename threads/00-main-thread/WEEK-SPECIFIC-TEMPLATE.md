@@ -2,7 +2,18 @@
 
 Use this whenever you create a new `week-N/README.md`.
 
-Every week-specific doc should include all 8 parts below.
+The main-thread weekly doc must be the single working document for that week.
+The reader should not have to guess:
+
+- what to learn
+- what to build
+- which resources to use
+- which other threads matter this week
+- where to record progress
+
+Every week-specific doc should still contain the 8 planning parts, but it must also turn them into an execution guide.
+
+## The 8 Required Parts
 
 ## 1. Week Goal
 
@@ -71,7 +82,7 @@ Examples:
 State what must be updated during the week:
 
 - tracker checkboxes
-- daily log
+- daily or weekly log
 - experiment cards if needed
 - design notes if a major decision changes
 
@@ -84,21 +95,66 @@ Define what must exist before the week is considered done:
 - blockers
 - go or no-go for next week
 
-## Recommended Structure
+## Required Structure
 
-For each weekly doc, include these sections:
+Each `week-N/README.md` should use this shape:
 
-1. Week Goal
-2. Existing Baseline
-3. Code Slice
-4. Staff Artifact
-5. AI Learning Slice
-6. System Design Drills
-7. Metrics Or Eval Slice
-8. Day-By-Day Plan
-9. Acceptance Criteria
-10. Tracking Instructions
+1. Start Here
+2. Week Goal
+3. This Week Across Threads
+4. Resource Curriculum
+5. Existing Baseline
+6. Learn Before Build
+7. Code Slice
+8. Staff Artifact
+9. System Design Drills
+10. Metrics Or Eval Slice
+11. Day-By-Day Plan
+12. Week-End Updates
+13. Acceptance Criteria
+
+## What "Start Here" Must Contain
+
+The `Start Here` section should tell the user exactly what to do on the first day:
+
+- which file is the main source of truth
+- which support thread files matter this week
+- which 2 to 4 resources to read first
+- what notes or artifacts to create before coding
+
+## What "This Week Across Threads" Must Contain
+
+Summarize all relevant threads for the week:
+
+- main build thread
+- AI engineering thread
+- system design thread
+- staff engineering thread
+- job-hunt thread status
+- interview bank thread status
+
+## What "Resource Curriculum" Must Contain
+
+For each resource, specify:
+
+- exact sections or lessons
+- why it matters this week
+- what to extract
+- how it connects to the code slice
+
+## What "Learn Before Build" Must Contain
+
+Map learning directly to implementation:
+
+- concept
+- code location
+- expected output
+
+Example:
+
+- `Structured outputs -> src/packages/types -> shared request/response schemas`
+- `Single-agent workflow -> src/api -> one typed endpoint with a simple execution path`
 
 ## Rule
 
-If a future weekly doc is missing one of the 8 parts, it is incomplete.
+If a future weekly doc is missing the 8 parts or is not self-contained enough to start the week from that file alone, it is incomplete.

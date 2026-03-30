@@ -83,6 +83,17 @@ Do not study system design as isolated trivia. Tie it to the product whenever po
 - General case: pick one from auction, cab booking, trending topics, or notification service
 - AI case: full enterprise AI copilot platform
 
+## Week Files
+
+- [week-1/README.md](/Users/pawan/Vizmo/team-ai/threads/02-system-design/week-1/README.md)
+- [week-2/README.md](/Users/pawan/Vizmo/team-ai/threads/02-system-design/week-2/README.md)
+- [week-3/README.md](/Users/pawan/Vizmo/team-ai/threads/02-system-design/week-3/README.md)
+- [week-4/README.md](/Users/pawan/Vizmo/team-ai/threads/02-system-design/week-4/README.md)
+- [week-5/README.md](/Users/pawan/Vizmo/team-ai/threads/02-system-design/week-5/README.md)
+- [week-6/README.md](/Users/pawan/Vizmo/team-ai/threads/02-system-design/week-6/README.md)
+- [week-7/README.md](/Users/pawan/Vizmo/team-ai/threads/02-system-design/week-7/README.md)
+- [week-8/README.md](/Users/pawan/Vizmo/team-ai/threads/02-system-design/week-8/README.md)
+
 ## Interview Discipline
 
 For each design, practice this order:

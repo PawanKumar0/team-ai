@@ -4,6 +4,8 @@ This is the repeatable pattern for every week in the roadmap.
 
 Use it with:
 
+- [START-EACH-WEEK.md](/Users/pawan/Vizmo/team-ai/threads/00-main-thread/START-EACH-WEEK.md)
+- [WEEKLY-HUB.md](/Users/pawan/Vizmo/team-ai/threads/00-main-thread/WEEKLY-HUB.md)
 - [WEEK-BY-WEEK.md](/Users/pawan/Vizmo/team-ai/threads/00-main-thread/WEEK-BY-WEEK.md)
 - [TRACKER.md](/Users/pawan/Vizmo/team-ai/threads/00-main-thread/TRACKER.md)
 - [WEEK-SPECIFIC-TEMPLATE.md](/Users/pawan/Vizmo/team-ai/threads/00-main-thread/WEEK-SPECIFIC-TEMPLATE.md)

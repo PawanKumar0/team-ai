@@ -5,6 +5,7 @@ Your resource dump is useful, but it is too noisy to be a curriculum.
 This file turns it into a ranked map.
 
 For the direct mapping of the resources you shared, use [RESOURCE_AUDIT.md](/Users/pawan/Vizmo/team-ai/threads/04-resource-map/RESOURCE_AUDIT.md).
+For week-by-week curated learning packs, use [WEEKLY-RESOURCE-PACKS.md](/Users/pawan/Vizmo/team-ai/threads/04-resource-map/WEEKLY-RESOURCE-PACKS.md).
 
 ## How To Use This File
 
@@ -33,6 +34,8 @@ For the direct mapping of the resources you shared, use [RESOURCE_AUDIT.md](/Use
   - <https://github.com/amitshekhariitbhu/ai-engineering-interview-questions>
 - Everything Claude Code
   - <https://github.com/affaan-m/everything-claude-code>
+- AI Engineering from Scratch
+  - <https://github.com/rohitg00/ai-engineering-from-scratch>
 - System Design Primer
   - <https://github.com/donnemartin/system-design-primer>
 - DDIA

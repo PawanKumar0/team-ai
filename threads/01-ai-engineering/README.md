@@ -110,6 +110,17 @@ This thread defines what you must know to call yourself an AI engineer in the cu
 - deployment
 - optimization
 
+## Week Files
+
+- [week-1/README.md](/Users/pawan/Vizmo/team-ai/threads/01-ai-engineering/week-1/README.md)
+- [week-2/README.md](/Users/pawan/Vizmo/team-ai/threads/01-ai-engineering/week-2/README.md)
+- [week-3/README.md](/Users/pawan/Vizmo/team-ai/threads/01-ai-engineering/week-3/README.md)
+- [week-4/README.md](/Users/pawan/Vizmo/team-ai/threads/01-ai-engineering/week-4/README.md)
+- [week-5/README.md](/Users/pawan/Vizmo/team-ai/threads/01-ai-engineering/week-5/README.md)
+- [week-6/README.md](/Users/pawan/Vizmo/team-ai/threads/01-ai-engineering/week-6/README.md)
+- [week-7/README.md](/Users/pawan/Vizmo/team-ai/threads/01-ai-engineering/week-7/README.md)
+- [week-8/README.md](/Users/pawan/Vizmo/team-ai/threads/01-ai-engineering/week-8/README.md)
+
 ## RAG Architecture Ladder
 
 ### 1. Basic Vector RAG

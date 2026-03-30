@@ -20,6 +20,17 @@ It is the right bank to train against.
 - then answer aloud in 25 to 40 minutes
 - finish by writing trade-offs and failure modes
 
+## Week Files
+
+- [week-1/README.md](/Users/pawan/Vizmo/team-ai/threads/06-ai-interview-bank/week-1/README.md)
+- [week-2/README.md](/Users/pawan/Vizmo/team-ai/threads/06-ai-interview-bank/week-2/README.md)
+- [week-3/README.md](/Users/pawan/Vizmo/team-ai/threads/06-ai-interview-bank/week-3/README.md)
+- [week-4/README.md](/Users/pawan/Vizmo/team-ai/threads/06-ai-interview-bank/week-4/README.md)
+- [week-5/README.md](/Users/pawan/Vizmo/team-ai/threads/06-ai-interview-bank/week-5/README.md)
+- [week-6/README.md](/Users/pawan/Vizmo/team-ai/threads/06-ai-interview-bank/week-6/README.md)
+- [week-7/README.md](/Users/pawan/Vizmo/team-ai/threads/06-ai-interview-bank/week-7/README.md)
+- [week-8/README.md](/Users/pawan/Vizmo/team-ai/threads/06-ai-interview-bank/week-8/README.md)
+
 ## Frontier Lab Style Questions
 
 ### 1. Design an agent platform that uses tools safely.
