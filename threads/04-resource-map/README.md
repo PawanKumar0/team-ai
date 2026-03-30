@@ -6,6 +6,7 @@ This file turns it into a ranked map.
 
 For the direct mapping of the resources you shared, use [RESOURCE_AUDIT.md](/Users/pawan/Vizmo/team-ai/threads/04-resource-map/RESOURCE_AUDIT.md).
 For week-by-week curated learning packs, use [WEEKLY-RESOURCE-PACKS.md](/Users/pawan/Vizmo/team-ai/threads/04-resource-map/WEEKLY-RESOURCE-PACKS.md).
+For the `ai-engineering-from-scratch` lesson split by week, use [AI-ENGINEERING-FROM-SCRATCH-WEEKLY-MAP.md](/Users/pawan/Vizmo/team-ai/threads/04-resource-map/AI-ENGINEERING-FROM-SCRATCH-WEEKLY-MAP.md).
 
 ## How To Use This File
 

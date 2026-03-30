@@ -22,6 +22,14 @@
 - [AI Engineering from Scratch: Phase 11](https://github.com/rohitg00/ai-engineering-from-scratch/tree/main/phases/11-llm-engineering)
 - [AI Engineering from Scratch: Phase 13](https://github.com/rohitg00/ai-engineering-from-scratch/tree/main/phases/13-tools-and-protocols)
 - [AI Engineering from Scratch: The Agent Loop](https://github.com/rohitg00/ai-engineering-from-scratch/tree/main/phases/14-agent-engineering/01-the-agent-loop)
+- lesson split:
+  - Phase 11 Lesson 01 `Prompt Engineering`
+  - Phase 11 Lesson 03 `Structured Outputs`
+  - Phase 13 Lesson 07 `Structured Output Schemas`
+  - Phase 13 Lesson 08 `API Design for AI`
+  - Phase 14 Lesson 01 `The Agent Loop`
+- mapped in:
+  - [AI-ENGINEERING-FROM-SCRATCH-WEEKLY-MAP.md](/Users/pawan/Vizmo/team-ai/threads/04-resource-map/AI-ENGINEERING-FROM-SCRATCH-WEEKLY-MAP.md)
 
 ## Apply In Team AI
 

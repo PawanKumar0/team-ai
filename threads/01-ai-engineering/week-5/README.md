@@ -22,6 +22,19 @@
 - [AI Engineering from Scratch: Phase 13](https://github.com/rohitg00/ai-engineering-from-scratch/tree/main/phases/13-tools-and-protocols)
 - [AI Engineering from Scratch: Phase 14](https://github.com/rohitg00/ai-engineering-from-scratch/tree/main/phases/14-agent-engineering)
 - [AI Engineering from Scratch: Phase 16](https://github.com/rohitg00/ai-engineering-from-scratch/tree/main/phases/16-multi-agent-and-swarms)
+- lesson split:
+  - Phase 13 Lesson 03 `MCP Fundamentals`
+  - Phase 13 Lesson 04 `Building MCP Servers`
+  - Phase 13 Lesson 05 `Building MCP Clients`
+  - Phase 13 Lesson 06 `MCP Resources, Prompts & Sampling`
+  - Phase 14 Lesson 02 `Tool Dispatch & Registration`
+  - Phase 14 Lesson 03 `Planning`
+  - Phase 14 Lesson 07 `Subagents`
+  - Phase 16 Lesson 01 `Why Multi-Agent`
+  - Phase 16 Lesson 03 `Communication Protocols`
+  - Phase 16 Lesson 13 `DAG-Based Orchestration`
+- mapped in:
+  - [AI-ENGINEERING-FROM-SCRATCH-WEEKLY-MAP.md](/Users/pawan/Vizmo/team-ai/threads/04-resource-map/AI-ENGINEERING-FROM-SCRATCH-WEEKLY-MAP.md)
 
 ## Apply In Team AI
 

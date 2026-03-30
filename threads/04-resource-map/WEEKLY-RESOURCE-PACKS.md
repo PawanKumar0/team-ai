@@ -33,13 +33,17 @@ For each week:
 - `ai-engineering-from-scratch`
   - use it as a structured supplement for hands-on progression
   - focus on:
-    - Phase 11 `LLM Engineering`
-    - Phase 13 `Tools & Protocols`
-    - Phase 14 lesson `The Agent Loop`
+    - Phase 11 Lesson 01 `Prompt Engineering`
+    - Phase 11 Lesson 03 `Structured Outputs`
+    - Phase 13 Lesson 07 `Structured Output Schemas`
+    - Phase 13 Lesson 08 `API Design for AI`
+    - Phase 14 Lesson 01 `The Agent Loop`
   - [Repo root](https://github.com/rohitg00/ai-engineering-from-scratch)
   - [Phase 11](https://github.com/rohitg00/ai-engineering-from-scratch/tree/main/phases/11-llm-engineering)
   - [Phase 13](https://github.com/rohitg00/ai-engineering-from-scratch/tree/main/phases/13-tools-and-protocols)
   - [Phase 14 lesson 01](https://github.com/rohitg00/ai-engineering-from-scratch/tree/main/phases/14-agent-engineering/01-the-agent-loop)
+  - Team AI weekly split:
+    - [AI-ENGINEERING-FROM-SCRATCH-WEEKLY-MAP.md](/Users/pawan/Vizmo/team-ai/threads/04-resource-map/AI-ENGINEERING-FROM-SCRATCH-WEEKLY-MAP.md)
 
 ### What To Extract
 
@@ -68,11 +72,15 @@ For each week:
 
 - `ai-engineering-from-scratch`
   - focus on Phase 11 topics:
-    - prompt engineering
-    - structured outputs
-    - function calling and tool use
-    - evaluation and testing
+    - Lesson 02 `Few-Shot, Chain-of-Thought, Tree-of-Thought`
+    - Lesson 09 `Function Calling & Tool Use`
+    - Lesson 10 `Evaluation & Testing LLM Applications`
+    - Lesson 11 `Caching, Rate Limiting & Cost Optimization`
+  - and Phase 13 topics:
+    - Lesson 01 `Function Calling Deep Dive`
+    - Lesson 02 `Tool Use Patterns`
   - [Phase 11](https://github.com/rohitg00/ai-engineering-from-scratch/tree/main/phases/11-llm-engineering)
+  - [Phase 13](https://github.com/rohitg00/ai-engineering-from-scratch/tree/main/phases/13-tools-and-protocols)
 
 ### What To Extract
 
@@ -97,10 +105,11 @@ For each week:
 
 - `ai-engineering-from-scratch`
   - focus on Phase 11 topics:
-    - embeddings
-    - vector databases
-    - RAG
-    - advanced RAG
+    - Lesson 04 `Embeddings & Vector Representations`
+    - Lesson 05 `Vector Databases`
+    - Lesson 06 `RAG`
+    - Lesson 07 `Advanced RAG`
+    - Lesson 13 `Building a Production LLM Application`
   - [Phase 11](https://github.com/rohitg00/ai-engineering-from-scratch/tree/main/phases/11-llm-engineering)
 - Stanford CS25
   - [Course](https://web.stanford.edu/class/cs25/)
@@ -127,9 +136,10 @@ For each week:
 
 - `ai-engineering-from-scratch`
   - focus on Phase 14 topics:
-    - memory
-    - context window management
-    - context compression and summarization
+    - Lesson 04 `Memory`
+    - Lesson 05 `Context Window Management`
+    - Lesson 06 `Context Compression & Summarization`
+    - Lesson 08 `Skills & Knowledge Loading`
   - [Phase 14](https://github.com/rohitg00/ai-engineering-from-scratch/tree/main/phases/14-agent-engineering)
 
 ### What To Extract
@@ -155,9 +165,19 @@ For each week:
 ### Supplement
 
 - `ai-engineering-from-scratch`
-  - Phase 13 `Tools & Protocols`
-  - Phase 14 `Agent Engineering`
-  - Phase 16 lessons `Why Multi-Agent` and `Communication Protocols`
+  - Phase 13 lessons:
+    - Lesson 03 `MCP Fundamentals`
+    - Lesson 04 `Building MCP Servers`
+    - Lesson 05 `Building MCP Clients`
+    - Lesson 06 `MCP Resources, Prompts & Sampling`
+  - Phase 14 lessons:
+    - Lesson 02 `Tool Dispatch & Registration`
+    - Lesson 03 `Planning`
+    - Lesson 07 `Subagents`
+  - Phase 16 lessons:
+    - Lesson 01 `Why Multi-Agent`
+    - Lesson 03 `Communication Protocols`
+    - Lesson 13 `DAG-Based Orchestration`
   - [Phase 13](https://github.com/rohitg00/ai-engineering-from-scratch/tree/main/phases/13-tools-and-protocols)
   - [Phase 14](https://github.com/rohitg00/ai-engineering-from-scratch/tree/main/phases/14-agent-engineering)
   - [Phase 16 lesson 01](https://github.com/rohitg00/ai-engineering-from-scratch/tree/main/phases/16-multi-agent-and-swarms/01-why-multi-agent)
@@ -188,10 +208,16 @@ For each week:
 - LangSmith evaluation docs
   - [Docs](https://docs.langchain.com/langsmith/evaluation)
 - `ai-engineering-from-scratch`
-  - Phase 11 `Evaluation & Testing`
-  - Phase 14 `Eval-Driven Agent Development`
-  - Phase 17 `Observability`
-  - Phase 18 `Red Teaming & Adversarial Testing`
+  - Phase 11:
+    - Lesson 10 `Evaluation & Testing LLM Applications`
+    - Lesson 12 `Guardrails, Safety & Content Filtering`
+  - Phase 14:
+    - Lesson 12 `Error Recovery & Self-Healing`
+    - Lesson 14 `Eval-Driven Agent Development`
+  - Phase 17:
+    - Lesson 05 `Observability`
+  - Phase 18:
+    - Lesson 03 `Red Teaming & Adversarial Testing`
   - [Phase 11](https://github.com/rohitg00/ai-engineering-from-scratch/tree/main/phases/11-llm-engineering)
   - [Phase 14](https://github.com/rohitg00/ai-engineering-from-scratch/tree/main/phases/14-agent-engineering)
   - [Phase 17](https://github.com/rohitg00/ai-engineering-from-scratch/tree/main/phases/17-infrastructure-and-production)
@@ -217,8 +243,19 @@ For each week:
 ### Supplement
 
 - `ai-engineering-from-scratch`
-  - Phase 17 `Infrastructure & Production`
-  - Phase 18 `Ethics, Safety & Alignment`
+  - Phase 14:
+    - Lesson 09 `Permissions, Sandboxing & Safety`
+  - Phase 17:
+    - Lesson 01 `Model Serving`
+    - Lesson 02 `Docker for AI Workloads`
+    - Lesson 06 `Cost Optimization`
+    - Lesson 07 `CI/CD for ML`
+    - Lesson 10 `Security`
+    - Lesson 11 `Build a Production AI Platform`
+  - Phase 18:
+    - Lesson 01 `AI Ethics`
+    - Lesson 02 `Alignment`
+    - Lesson 04 `Responsible AI Frameworks`
   - [Phase 17](https://github.com/rohitg00/ai-engineering-from-scratch/tree/main/phases/17-infrastructure-and-production)
   - [Phase 18](https://github.com/rohitg00/ai-engineering-from-scratch/tree/main/phases/18-ethics-safety-alignment)
 
@@ -242,7 +279,15 @@ For each week:
 ### Supplement
 
 - `ai-engineering-from-scratch`
-  - Phase 19 `Capstone Projects`
+  - Phase 17:
+    - Lesson 08 `A/B Testing & Feature Flags for AI`
+    - Lesson 11 `Build a Production AI Platform`
+  - Phase 19 projects:
+    - Project 01 `Build a Mini GPT & Chat Interface`
+    - Project 02 `Build a Multimodal RAG System`
+    - Project 03 `Build an Autonomous Research Agent`
+    - Project 04 `Build a Multi-Agent Development Team`
+    - Project 05 `Build a Production AI Platform`
   - use the capstone framing and “learn-build-ship” structure as portfolio inspiration
   - [Phase 19](https://github.com/rohitg00/ai-engineering-from-scratch/tree/main/phases/19-capstone-projects)
 

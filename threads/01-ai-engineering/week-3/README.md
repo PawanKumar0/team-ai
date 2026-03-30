@@ -22,6 +22,14 @@
 - [Azure Advanced RAG](https://learn.microsoft.com/en-us/azure/developer/ai/advanced-retrieval-augmented-generation)
 - [Nir Diamant RAG Techniques](https://github.com/NirDiamant/RAG_Techniques)
 - [AI Engineering from Scratch: Phase 11](https://github.com/rohitg00/ai-engineering-from-scratch/tree/main/phases/11-llm-engineering)
+- lesson split:
+  - Phase 11 Lesson 04 `Embeddings & Vector Representations`
+  - Phase 11 Lesson 05 `Vector Databases`
+  - Phase 11 Lesson 06 `RAG`
+  - Phase 11 Lesson 07 `Advanced RAG`
+  - Phase 11 Lesson 13 `Building a Production LLM Application`
+- mapped in:
+  - [AI-ENGINEERING-FROM-SCRATCH-WEEKLY-MAP.md](/Users/pawan/Vizmo/team-ai/threads/04-resource-map/AI-ENGINEERING-FROM-SCRATCH-WEEKLY-MAP.md)
 
 ## Apply In Team AI
 

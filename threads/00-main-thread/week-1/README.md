@@ -126,9 +126,16 @@ These are the exact resources for Week 1.
 
 - use only as a structured supplement this week
 - read or skim:
+  - Phase 11 Lesson 01 `Prompt Engineering`
+  - Phase 11 Lesson 03 `Structured Outputs`
+  - Phase 13 Lesson 07 `Structured Output Schemas`
+  - Phase 13 Lesson 08 `API Design for AI`
+  - Phase 14 Lesson 01 `The Agent Loop`
+- source links:
   - [Phase 11: LLM Engineering](https://github.com/rohitg00/ai-engineering-from-scratch/tree/main/phases/11-llm-engineering)
   - [Phase 13: Tools & Protocols](https://github.com/rohitg00/ai-engineering-from-scratch/tree/main/phases/13-tools-and-protocols)
   - [Phase 14 lesson 01: The Agent Loop](https://github.com/rohitg00/ai-engineering-from-scratch/tree/main/phases/14-agent-engineering/01-the-agent-loop)
+  - [Team AI weekly split map](/Users/pawan/Vizmo/team-ai/threads/04-resource-map/AI-ENGINEERING-FROM-SCRATCH-WEEKLY-MAP.md)
 - why it matters:
   - it gives a strong hands-on progression structure
   - it reinforces the build-first mindset

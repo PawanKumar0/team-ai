@@ -20,6 +20,13 @@
 - [LangGraph Docs](https://docs.langchain.com/langgraph)
 - [OpenAI Evaluation Best Practices](https://platform.openai.com/docs/guides/evaluation-best-practices)
 - [AI Engineering from Scratch: Phase 14](https://github.com/rohitg00/ai-engineering-from-scratch/tree/main/phases/14-agent-engineering)
+- lesson split:
+  - Phase 14 Lesson 04 `Memory`
+  - Phase 14 Lesson 05 `Context Window Management`
+  - Phase 14 Lesson 06 `Context Compression & Summarization`
+  - Phase 14 Lesson 08 `Skills & Knowledge Loading`
+- mapped in:
+  - [AI-ENGINEERING-FROM-SCRATCH-WEEKLY-MAP.md](/Users/pawan/Vizmo/team-ai/threads/04-resource-map/AI-ENGINEERING-FROM-SCRATCH-WEEKLY-MAP.md)
 
 ## Apply In Team AI
 
